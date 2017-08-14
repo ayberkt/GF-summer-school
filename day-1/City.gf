@@ -6,10 +6,14 @@ abstract City = {
 
   fun
     Hello : Phrase;
+
+    -- Places
     City : Place;
     Street : Place;
     University : Place;
     Bar : Place;
+
+    -- Properties
     Beautiful : Property;
     Shabby : Property;
     Empty : Property;

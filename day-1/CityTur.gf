@@ -18,5 +18,5 @@ concrete CityTur of City = open Prelude in {
     PropPlace plc prp = {s = prp ++ plc.s};
     WhereIsThe plc = plc.s ++ "nerede";
     AllPlacesAre plc prp = "her" ++ plc.s ++ prp;
-    ILikeThePlace plc = plc.s + "'yi" ++ "seviyorum";
+    ILikeThePlace plc = (plc.s ++ "'yi") ++ "seviyorum";
 }

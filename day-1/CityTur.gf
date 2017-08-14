@@ -11,7 +11,7 @@ concrete CityTur of City = open Prelude in {
     University = {s = "üniversite"};
     Bar = {s = "bar"};
     Beautiful = "güzel";
-    Shabby = "eski pusku";
+    Shabby = "eski püskü";
     Empty = "boş";
     Closed = "kapalı";
     ThePlaceIs plc prp = plc.s ++ prp;

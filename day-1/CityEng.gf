@@ -13,5 +13,9 @@ concrete CityEng of City = {
     Beautiful = "beautiful";
     Shabby = "shabby";
     Empty = "empty";
+    Closed = "closed";
     ThePlaceIs pl prp = "the" ++ pl ++ "is" ++ prp;
+    PropPlace plc prp = prp ++ plc;
+    WhereIsThe plc =
+      "where" ++ "is" ++ "the" ++ plc;
 }

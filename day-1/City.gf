@@ -16,4 +16,6 @@ abstract City = {
     Closed : Property;
 
     ThePlaceIs : Place -> Property -> Phrase;
+    PropPlace : Place -> Property -> Place;
+    WhereIsThe : Place -> Phrase;
 }

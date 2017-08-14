@@ -17,6 +17,11 @@ concrete CityIta of City = open Prelude in {
     Closed = regAdj "chiuoso";
     ThePlaceIs plc prp =
       defArt plc.g ++ plc.s ++ "e" ++ prp ! plc.g;
+    PropPlace plc prp =
+        { s = plc.s ++ prp ! plc.g; g = plc.g }
+      | { s = prp ! plc.g ++ plc.s; g = plc.g };
+    WhereIsThe plc =
+      "dove" ++ "e" ++ defArt plc.g ++ plc.s;
 
   param
     Gender = Masc | Fem;

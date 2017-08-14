@@ -27,7 +27,9 @@ concrete CityIta of City = open Prelude in {
         table { Masc => s; Fem => init s + "a" };
 
     defArt : Gender -> Str =
-      \g -> case g of {
-        Masc => "il";
-        Fem => pre { "a" | "e" |  } };
+      \g ->
+        case g of {
+          Masc => "il";
+          Fem => pre { "a" | "e" | "i" | "o" | "u" => "l"; _ => "la" }
+        };
 }

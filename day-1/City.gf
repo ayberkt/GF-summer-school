@@ -18,4 +18,6 @@ abstract City = {
     ThePlaceIs : Place -> Property -> Phrase;
     PropPlace : Place -> Property -> Place;
     WhereIsThe : Place -> Phrase;
+    AllPlacesAre : Place -> Property -> Phrase;
+    ILikeThePlace : Place -> Phrase;
 }

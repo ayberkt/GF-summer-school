@@ -18,4 +18,6 @@ concrete CityEng of City = {
     PropPlace plc prp = prp ++ plc;
     WhereIsThe plc =
       "where" ++ "is" ++ "the" ++ plc;
+    AllPlacesAre = "TODO";
+    ILikeThePlace plc = "TODO";
 }

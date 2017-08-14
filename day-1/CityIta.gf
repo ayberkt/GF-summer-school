@@ -22,6 +22,8 @@ concrete CityIta of City = open Prelude in {
       | { s = prp ! plc.g ++ plc.s; g = plc.g };
     WhereIsThe plc =
       "dove" ++ "e" ++ defArt plc.g ++ plc.s;
+    AllPlacesAre plc prp = "TODO";
+    ILikeThePlace plc = "TODO";
 
   param
     Gender = Masc | Fem;

@@ -18,3 +18,9 @@ geometry: margin=1in
           ```
 * _Exercise_: Write a grammar that generate the (non-context-free) language
   $a^nb^nc^n$, i.e., a language whose strins are the empty string.
+
+## Nonconcatenative morphology: Arabic
+
+* Words are data structures rather than strings!
+
+## Modular and scalable grammar writing

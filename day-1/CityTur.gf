@@ -57,7 +57,6 @@ concrete CityTur of City = open Prelude in {
             InsertY wt => s + "y" + mkMarker wt;
             Reduction wt =>
               case s of {
-                -- w'@(_ + #vowel + _)+ c1@#consonant + #vowel + c2@#consonant =>
                 w' + (#consonant + #vowel + #consonant)*
                    + (c1@#consonant + #vowel + c2@#consonant) =>
                    w' + c1 + c2 + mkMarker wt

@@ -1,0 +1,233 @@
+Aarnes-MacBook-Pro:foods aarne$ gf
+                              
+         *  *  *              
+      *           *           
+    *               *         
+   *                          
+   *                          
+   *        * * * * * *       
+   *        *         *       
+    *       * * * *  *        
+      *     *      *          
+         *  *  *              
+                              
+This is GF version 3.9. 
+Built on darwin/x86_64 with ghc-8.0, flags: interrupt server c-runtime
+License: see help -license.   
+
+
+Languages:
+> i FoodsE
+FoodsEng.gf  FoodsEpo.gf
+> i FoodsEng.gf 
+- compiling Foods.gf...   write file Foods.gfo
+- compiling FoodsEng.gf...   write file FoodsEng.gfo
+linking ... OK
+
+Languages: FoodsEng
+6 msec
+Foods> p "th
+that   these  this   those
+Foods> p "this pizza is very 
+Italian    boring     delicious  expensive  fresh      very       warm
+Foods> p "this pizza is very expensive "
+Pred (This Pizza) (Very Expensive)
+
+0 msec
+Foods> l Very Expensive
+very expensive
+
+0 msec
+Foods> i Foods
+Foods.gf      FoodsCze.gf   FoodsGer.gf   FoodsIta.gf   FoodsOri.gf   FoodsTsn.gf
+Foods.gfo     FoodsDut.gf   FoodsGla.gf   FoodsJpn.gf   FoodsPes.gf   FoodsTur.gf
+FoodsAfr.gf   FoodsEng.gf   FoodsGle.gf   FoodsLav.gf   FoodsPor.gf   FoodsUrd.gf
+FoodsAmh.gf   FoodsEng.gfo  FoodsHeb.gf   FoodsMkd.gf   FoodsRon.gf
+FoodsBul.gf   FoodsEpo.gf   FoodsHin.gf   FoodsMlt.gf   FoodsSpa.gf
+FoodsCat.gf   FoodsFin.gf   FoodsI.gf     FoodsMon.gf   FoodsSwe.gf
+FoodsChi.gf   FoodsFre.gf   FoodsIce.gf   FoodsNep.gf   FoodsTha.gf
+Foods> i FoodsLav.gf 
+- compiling FoodsLav.gf...   write file FoodsLav.gfo
+linking ... OK
+
+Languages: FoodsEng FoodsLav
+10 msec
+Foods> l Very Expensive
+very expensive
+ļoti dārgs
+
+0 msec
+Foods> h
+!
+system command: escape to system shell
+
+?
+system pipe: send value from previous command to a system command
+
+ai, abstract_info
+Provides an information about a function, an expression or a category from the abstract syntax
+
+aw, align_words
+show word alignments between languages graphically
+
+ca, clitic_analyse
+print the analyses of all words into stems and clitics
+
+cc, compute_concrete
+computes concrete syntax term using a source grammar
+
+dc, define_command
+define a command macro
+
+dg, dependency_graph
+print module dependency graph
+
+dt, define_tree
+define a tree or string macro
+
+e, empty
+empty the environment (except the command history)
+
+eb, example_based
+converts .gfe files to .gf files by parsing examples to trees
+
+eh, execute_history
+read commands from a file and execute them
+
+gr, generate_random
+generate random trees in the current abstract syntax
+
+gt, generate_trees
+generates a list of trees, by default exhaustive
+
+h, help
+get description of a command, or a the full list of commands
+
+i, import
+import a grammar from source code or compiled .pgf file
+
+l, linearize
+convert an abstract syntax expression to string
+
+...
+
+Foods> h l
+l, linearize
+convert an abstract syntax expression to string
+
+Shows the linearization of a Tree by the grammars in scope.
+The -lang flag can be used to restrict this to fewer languages.
+A sequence of string operations (see command ps) can be given
+as options, and works then like a pipe to the ps command, except
+that it only affect the strings, not e.g. the table labels.
+These can be given separately to each language with the unlexer flag
+whose results are prepended to the other lexer flags. The value of the
+unlexer flag is a space-separated list of comma-separated string operation
+sequences; see example.
+
+options:
+ -all	show all forms and variants, one by line (cf. l -list)
+ -bracket	show tree structure with brackets and paths to nodes
+ -groups	all languages, grouped by lang, remove duplicate strings
+ -list	show all forms and variants, comma-separated on one line (cf. l -all)
+ -multi	linearize to all languages (default)
+ -table	show all forms labelled by parameters
+ -treebank	show the tree and tag linearizations with language names
+ -bind	bind tokens separated by Prelude.BIND, i.e. &+
+ -chars	lexer that makes every non-space character a token
+ -from_amharic	from unicode to GF Amharic transliteration
+ -from_ancientgreek	from unicode to GF ancient Greek transliteration
+ -from_arabic	from unicode to GF Arabic transliteration
+ -from_cp1251	decode from cp1251 (Cyrillic used in Bulgarian resource)
+ -from_devanagari	from unicode to GF Devanagari transliteration
+ -from_greek	from unicode to GF modern Greek transliteration
+ -from_hebrew	from unicode to GF unvocalized Hebrew transliteration
+...
+
+
+Foods> gr
+Pred (That (Mod Delicious (Mod Italian Cheese))) (Very Italian)
+
+0 msec
+Foods> gr | l
+these wines are boring
+šie vīni ir garlaicīgi
+
+0 msec
+Foods> gr | l | p
+Pred (These (Mod Boring Fish)) Warm
+
+The parser failed at token 1: "these"
+The parser failed at token 1: "\353\299s"
+Pred (These (Mod Boring Fish)) Warm
+
+0 msec
+Foods> gr | l -lang=Lav | p -lang=Lav
+Pred (That Cheese) (Very Delicious)
+
+0 msec
+Foods> gr -tr | l -lang=Lav -tr | p -lang=Lav
+Pred (This Pizza) Warm
+
+šī pica ir silta
+
+Pred (This Pizza) Warm
+
+0 msec
+Foods> gr -tr | l -lang=Lav -tr | p -lang=Lav -tr | l -lang=Eng
+Pred (That Fish) (Very Boring)
+
+tā zivs ir ļoti garlaicīga
+
+Pred (That Fish) (Very Boring)
+
+that fish is very boring
+
+1 msec
+Foods> gt
+Pred (That Cheese) Boring
+Pred (That Cheese) Delicious
+Pred (That Cheese) Expensive
+Pred (That Cheese) Fresh
+Pred (That Cheese) Italian
+Pred (That Cheese) (Very Boring)
+Pred (That Cheese) (Very Delicious)
+Pred (That Cheese) (Very Expensive)
+Pred (That Cheese) (Very Fresh)
+Pred (That Cheese) (Very Italian)
+Pred (That Cheese) (Very (Very Boring))
+Pred (That Cheese) (Very (Very Delicious))
+Pred (That Cheese) (Very (Very Expensive))
+Pred (That Cheese) (Very (Very Fresh))
+Pred (That Cheese) (Very (Very Italian))
+Pred (That Cheese) (Very (Very (Very Boring)))
+Pred (That Cheese) (Very (Very (Very Delicious)))
+Pred (That Cheese) (Very (Very (Very Expensive)))
+Pred (That Cheese) (Very (Very (Very Fresh)))
+Pred (That Cheese) (Very (Very (Very Italian)))
+Pred (That Cheese) (Very (Very (Very Warm)))
+...
+
+
+Foods> gr | l | p
+
+Foods> gr | l -lang=Lav | p -lang=Lav
+
+Foods> pg -words -lang=Lav | ? wc
+
+Foods> e
+
+Foods> i -retain alltenses/ParadigmsGer.gfo
+
+> cc mkV "machen"
+{s = table
+       ResGer.VForm
+       ["machen"; "zu" ++ "machen"; "mache"; "machst"; "macht"; "machen";
+        "macht"; "machen"; "mache"; "machest"; "mache"; "machen"; "machet";
+        "machen"; "machte"; "machtest"; "machte"; "machten"; "machtet";
+        "machten"; "machte"; "machtest"; "machte"; "machten"; "machtet";
+        "machten"; "mache"; "machst"; "macht"; "machen"; "macht"; "machen";
+        "mache"; "machest"; "mache"; "machen"; "machet"; "machen";
+        "machte"; "machtest"; "machte"; "machten"; "machtet"; "machten";
+...
+

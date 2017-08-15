@@ -12,3 +12,7 @@ geometry: margin=1in
 ```Grammatical Framework
 \\ g => t : G -> T
 ```
+    - Wildcards can also be used with it:
+      ```Grammatical Framework
+      \\_, _ => "blu"
+      ```

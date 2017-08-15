@@ -4,40 +4,49 @@ concrete CityTur of City = open Prelude in {
 
   param
     WowelType = Front | Back;
-    DefAccCase = OnlyI WowelType | SoftenCons WowelType | InsertY WowelType;
+    ConcatType =
+        NormalConcat WowelType
+      | SoftenCons WowelType
+      | InsertY WowelType;
+    Case = Nom | DefAcc ;
 
   lincat
     Phrase = Str;
-    Place = {s : Str; dac : DefAccCase};
+    Place = Case => Str;
     Property = Str;
 
   lin
     Hello = "merhaba";
-    City = {s = "şehir"; dac = OnlyI Front};
-    Street = {s = "sokak"; dac = SoftenCons Back};
-    University = {s = "üniversite"; dac = InsertY Front};
-    Bar = {s = "bar"; dac = OnlyI Back};
+
+    -- Linearizations of places.
+    City = mkPlace "şehir" (NormalConcat Front);
+    Street = mkPlace "sokak" (SoftenCons Back);
+    University = mkPlace "üniversite" (InsertY Front);
+    Bar = mkPlace "bar" (NormalConcat Back);
+
     Beautiful = "güzel";
     Shabby = "eski püskü";
     Empty = "boş";
     Closed = "kapalı";
-    ThePlaceIs plc prp = plc.s ++ prp;
-    PropPlace plc prp = {s = prp ++ plc.s; dac = plc.dac};
-    WhereIsThe plc = plc.s ++ "nerede";
-    AllPlacesAre plc prp = "her" ++ plc.s ++ prp;
-    ILikeThePlace plc =
-      defAccMarking plc.s ! plc.dac ++ "seviyorum";
+    ThePlaceIs plc prp = plc ! Nom ++ prp;
+    PropPlace plc prp = \\_ => prp ++ (plc ! Nom);
+    WhereIsThe plc = plc ! Nom ++ "nerede";
+    AllPlacesAre plc prp = "her" ++ plc ! Nom ++ prp;
+    ILikeThePlace plc = plc ! DefAcc ++ "seviyorum";
 
   oper
-
-   defAccMarking : Str -> DefAccCase => Str =
-     \s ->
-       table {
-         OnlyI Front => s + "i";
-         OnlyI Back  => s + "ı";
-         SoftenCons Front => init s + "ği";
-         SoftenCons Back => init s + "ğı";
-         InsertY Front => s + "yi";
-         InsertY Back => s + "yı"
-       };
+    mkPlace : Str -> ConcatType -> (Case => Str) =
+      \s -> \ct ->
+        table { Nom => s; DefAcc => defAccMarking }
+      where {
+        defAccMarking =
+          case ct of {
+            NormalConcat Front => s + "i";
+            NormalConcat Back => s + "ı";
+            SoftenCons Front => init s + "ği";
+            SoftenCons Back => init s + "ğı";
+            InsertY Front => s + "yi";
+            InsertY Back => s + "yı"
+          }
+      };
 }

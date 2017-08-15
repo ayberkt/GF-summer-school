@@ -31,7 +31,7 @@ concrete CityTur of City = open Prelude in {
     Closed = "kapalı";
     ThePlaceIs plc prp = plc ! Nom ++ prp;
     PropPlace plc prp = \\_ => prp ++ (plc ! Nom);
-    WhereIsThe plc = plc ! Nom ++ "nerede";
+    WhereIsThe plc = plc ! Nom ++ "nerede?";
     AllPlacesAre plc prp = "her" ++ plc ! Nom ++ prp;
     ILikeThePlace plc = plc ! DefAcc ++ "seviyorum";
 

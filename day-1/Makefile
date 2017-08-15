@@ -1,3 +1,3 @@
 all:
-	gf -s -make City.gf CityEng.gf CityIta.gf
+	gf -s -make City.gf CityEng.gf CityIta.gf CityTur.gf
 

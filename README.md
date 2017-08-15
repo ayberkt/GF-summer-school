@@ -1,4 +1,4 @@
-# Lab Notes for Github Summer School 2017
+# Lab Notes for the Fifth GF Summer School
 
 ## Things to Know
 

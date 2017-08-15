@@ -36,25 +36,22 @@ concrete CityTur of City = open Prelude in {
     ILikeThePlace plc = plc ! DefAcc ++ "seviyorum";
 
   oper
+    mkMarker : VowelType -> Str =
+      \wt -> case wt of { Front => "i"; Back => "ı" };
+
     mkPlace : Str -> ConcatType -> (Case => Str) =
       \s -> \ct ->
         table { Nom => s; DefAcc => defAccMarking }
       where {
         defAccMarking =
           case ct of {
-            NormalConcat Front => s + "i";
-            NormalConcat Back => s + "ı";
-            SoftenCons Front => init s + "ği";
-            SoftenCons Back => init s + "ğı";
-            InsertY Front => s + "yi";
-            InsertY Back => s + "yı";
+            NormalConcat wt => s + mkMarker wt;
+            SoftenCons wt => init s + "ğ" + mkMarker wt;
+            InsertY wt => s + "y" + mkMarker wt;
             Reduction wt =>
-              let
-                marker : Str = case wt of { Front => "i"; Back => "ı" }
-              in
-                case s of {
-                  w' + ("h" + w'' + "r") => w' + "h" + "r" + marker
-                }
+              case s of {
+                w' + ("h" + w'' + "r") => w' + "h" + "r" + mkMarker wt
+              }
           }
       };
 }

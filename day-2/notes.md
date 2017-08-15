@@ -24,3 +24,14 @@ geometry: margin=1in
 * Words are data structures rather than strings!
 
 ## Modular and scalable grammar writing (Hans Leiß)
+
+* Type synonyms can be defined as
+    ```Grammatical Framework
+    oper Noun : Type = {s : Number => Str};
+    ```
+
+* Inheritance vs Opening
+    - The general syntax: `moduletype name = extends ** opens in body`.
+    - Inheritance: same tpye of module, inherit contents.
+    - Opening: resource modules, just use its contents.
+    - Both cases enjoy separate compilation.

@@ -39,6 +39,11 @@ concrete CityTur of City = open Prelude in {
     mkMarker : VowelType -> Str =
       \wt -> case wt of { Front => "i"; Back => "ı" };
 
+    vowel : pattern Str = #("a" | "e" | "i" | "o" | "u");
+    consonant : pattern Str =
+      #("c" | "ç" |	"d" |	"f" |	"g" |	"ğ" | "h" | "j" |	"k" |	"l"
+      | "m" |	"n" | "p" |	"r" |	"s" |	"ş" | "t" |	"v" |	"y" | "z");
+
     mkPlace : Str -> ConcatType -> (Case => Str) =
       \s -> \ct ->
         table { Nom => s; DefAcc => defAccMarking }
@@ -50,7 +55,8 @@ concrete CityTur of City = open Prelude in {
             InsertY wt => s + "y" + mkMarker wt;
             Reduction wt =>
               case s of {
-                w' + ("h" + w'' + "r") => w' + "h" + "r" + mkMarker wt
+                w'@(_ + #vowel + _)+ c1@#consonant + #vowel + c2@#consonant =>
+                  w' + c1 + c2 + mkMarker wt
               }
           }
       };

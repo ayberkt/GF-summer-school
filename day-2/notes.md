@@ -9,10 +9,10 @@ geometry: margin=1in
 ---
 
 * There is a lambda-like syntactic sugar for tables:
-```Grammatical Framework
-\\ g => t : G -> T
-```
+    ```Grammatical Framework
+    \\ g => t : G -> T
+    ```
     - Wildcards can also be used with it:
-      ```Grammatical Framework
-      \\_, _ => "blu"
-      ```
+          ```Grammatical Framework
+          \\_, _ => "blu"
+          ```

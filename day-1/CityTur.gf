@@ -3,11 +3,12 @@ concrete CityTur of City = open Prelude in {
     lexer=bind;
 
   param
-    WowelType = Front | Back;
+    VowelType = Front | Back;
     ConcatType =
-        NormalConcat WowelType
-      | SoftenCons WowelType
-      | InsertY WowelType;
+        NormalConcat VowelType
+      | SoftenCons VowelType
+      | InsertY VowelType
+      | Reduction VowelType;
     Case = Nom | DefAcc ;
 
   lincat
@@ -19,7 +20,7 @@ concrete CityTur of City = open Prelude in {
     Hello = "merhaba";
 
     -- Linearizations of places.
-    City = mkPlace "şehir" (NormalConcat Front);
+    City = mkPlace "şehir" (Reduction Front);
     Street = mkPlace "sokak" (SoftenCons Back);
     University = mkPlace "üniversite" (InsertY Front);
     Bar = mkPlace "bar" (NormalConcat Back);
@@ -46,7 +47,14 @@ concrete CityTur of City = open Prelude in {
             SoftenCons Front => init s + "ği";
             SoftenCons Back => init s + "ğı";
             InsertY Front => s + "yi";
-            InsertY Back => s + "yı"
+            InsertY Back => s + "yı";
+            Reduction wt =>
+              let
+                marker : Str = case wt of { Front => "i"; Back => "ı" }
+              in
+                case s of {
+                  w' + ("h" + w'' + "r") => w' + "h" + "r" + marker
+                }
           }
       };
 }

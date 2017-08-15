@@ -13,9 +13,9 @@ geometry: margin=1in
     \\ g => t : G -> T
     ```
     - Wildcards can also be used with it:
-          ```Grammatical Framework
-          \\_, _ => "blu"
-          ```
+        ```Grammatical Framework
+        \\_, _ => "blu"
+        ```
 * _Exercise_: Write a grammar that generate the (non-context-free) language
   $a^nb^nc^n$, i.e., a language whose strins are the empty string.
 
@@ -23,4 +23,4 @@ geometry: margin=1in
 
 * Words are data structures rather than strings!
 
-## Modular and scalable grammar writing
+## Modular and scalable grammar writing (Hans Leiß)

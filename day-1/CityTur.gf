@@ -4,7 +4,7 @@ concrete CityTur of City = open Prelude in {
 
   param
     WowelType = Front | Back;
-    DefAccCase = OnlyI | YandI | SoftenKandI;
+    DefAccCase = OnlyI WowelType | SoftenCons | InsertY WowelType;
 
   lincat
     Phrase = Str;
@@ -13,10 +13,10 @@ concrete CityTur of City = open Prelude in {
 
   lin
     Hello = "merhaba";
-    City = {s = "şehir"; dac = OnlyI};
-    Street = {s = "sokak"; dac = SoftenKandI};
-    University = {s = "üniversite"; dac = YandI};
-    Bar = {s = "bar"; dac = OnlyI};
+    City = {s = "şehir"; dac = OnlyI Front};
+    Street = {s = "sokak"; dac = SoftenCons};
+    University = {s = "üniversite"; dac = InsertY Front};
+    Bar = {s = "bar"; dac = OnlyI Back};
     Beautiful = "güzel";
     Shabby = "eski püskü";
     Empty = "boş";
@@ -26,14 +26,17 @@ concrete CityTur of City = open Prelude in {
     WhereIsThe plc = plc.s ++ "nerede";
     AllPlacesAre plc prp = "her" ++ plc.s ++ prp;
     ILikeThePlace plc =
-      plc.s ++ BIND ++ defAccMarking ! plc.dac ++ "seviyorum";
+      (defAccMarking plc.s) ! plc.dac ++ "seviyorum";
 
   oper
 
-   defAccMarking : DefAccCase => Str =
-     table {
-       OnlyI => "i";
-       YandI => "yi";
-       SoftenKAndI => "gi"
-     };
+   defAccMarking : Str -> DefAccCase => Str =
+     \s ->
+       table {
+         OnlyI Front => s ++ BIND ++ "i";
+         OnlyI Back  => s ++ BIND ++ "ı";
+         SoftenCons => s ++ BIND ++ "gi";
+         InsertY Front => s ++ BIND ++ "yi";
+         InsertY Back => s ++ BIND ++ "yı"
+       };
 }

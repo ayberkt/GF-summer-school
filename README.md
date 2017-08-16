@@ -17,6 +17,16 @@ channel #gf
 
 this is a good place to ask for help.
 
+### get help on slack
+
+there is a slack chat: gf-summer-school-5.slack.com
+
+How to play Slack?
+
+Download a Slack app for your computer and your phone.
+
+Keep that app running and stay logged in to the summer school slack group. Join various channels as your interest dictates.
+
 ### you should install GF locally and use it on your command line
 
 while Day 1 introduced cloud.grammaticalframework.org/gfse/

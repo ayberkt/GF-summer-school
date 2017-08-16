@@ -2,3 +2,6 @@
 *.pgf
 *.pdf
 *.log
+*.out
+*.aux
+*/notes.tex

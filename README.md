@@ -28,14 +28,14 @@ dinner is planned for
 
 ## Other Technical Things
 
-If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. In fact the more technical you become, the more you feel behind, until one day you master category theory and transcend our mortal plane.
+If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. In fact the more technical you become, the more behind you feel, until one day you master category theory and transcend our mortal plane.
 
 
 ### Text Editor
 
-Editing source code in Notepad is like putting on eyeliner in a moving car: you can do it, but eventually you will lose an eye.
+Editing source code in Notepad is like putting on eyeliner in a moving car: you can do it, but do it enough times and you are guaranteed to regret it.
 
-Editing source code in Word is a perversion and we will not talk about that further.
+Editing source code in Word is a perversion and we will not talk about that further here.
 
 The advanced geeks use editors like emacs and vim.
 
@@ -67,7 +67,7 @@ Then get used to going in and out of the folders.
 Occasionally, run `git pull` to get the latest day's worth of work.
 
 
-### Now You Are Sisyphus
+### Now You Are Ready To Be Sisyphus
 
 Run Atom to edit your grammar files.
 
@@ -77,8 +77,8 @@ Your program will not work as you expect.
 
 This is called debugging. Good luck. May Lady Lovelace smile upon your efforts.
 
-Make changes. Save the file. Try `gf` again.
+Make changes. Save the file. Try `gf` again. Does it do what you want? No.
 
-Repeat this ten thousand times and you will find you have become one of the technical people. You will catch yourself saying, "oh, that's simple, all you have to do is ---".
+Repeat this cycle ten thousand times and you will find you have become one of the technical people in the room. You will catch yourself saying to newbies, "oh, that's simple, all you have to do is ---".
 
-When this happens, it is time to go learn category theory.
+When this happens, you will know it is time to learn category theory.

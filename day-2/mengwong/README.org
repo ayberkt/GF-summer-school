@@ -1,0 +1,11 @@
+If this problem stumped you, it might not be your fault: you might not have taken an introductory class in computer science.
+
+If you had, you would have been exposed to the idea of recursion. The classic way of defining a recursive function is to begin with a *base case*.
+
+https://pbs.twimg.com/media/DG8-aAkXYAQjvav.jpg:large
+
+Then you build upon it with an *inductive step.* In this example the inductive step would be "go up one floor". That's enough to construct an elevator that can go up any number of floors.
+
+That's all we're doing in this assignment!
+
+The second assignment just splits the inductive step in two directions.

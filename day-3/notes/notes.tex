@@ -1,0 +1,148 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdftitle={Day 3 of the Fifth GF Summer School},
+            pdfauthor={Ayberk Tosun},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{ebproof}
+
+\title{Day 3 of the Fifth GF Summer School}
+\author{Ayberk Tosun}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{Resource grammar
+libraries}\label{resource-grammar-libraries}
+
+\begin{itemize}
+\item
+  We want to abstract out the abstract syntax trees commonly used in
+  linguistics.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We do this kind of stuff using resource grammars.
+  \end{itemize}
+\item
+  Here are some of the functions we use for these purposes:
+
+\begin{verbatim}
+UseCl : Tense -> Pred -> Cl -> S
+PredVP : NP -> VP -> Cl
+DetCN : Det -> CN -> NP
+ComplV2 : V2 -> NP -> VP
+AdjCN : AP -> CN -> CN
+PositA : A -> AP
+UseN : N -> CN
+the_Det : Det
+usePron : Pron -> NP
+we_Pron : Pron
+cat_N : N
+\end{verbatim}
+\item
+  Some of the abstract and concrete syntax looks like the following:
+
+\begin{verbatim}
+  cat S; CL; Tense; Pred; VP; NP; CN; Det; AP; Pron; N; A; V2;
+    param
+      Agr = Ag Gender Number Person
+      Case = Nom | Acc
+  lincat
+    S = {s : Str};
+    Cl = {s : PTense => PPol => Str}
+    Tense = {t : PTense}
+    Pol = {t : PPol}
+    VP = {s : PTense => PPol => Agr}
+    NP = {s : Case => Str; a : Agr}
+    CN = {s : Number => Case => Str; g : Gender}
+    AP = {s : Gender => Number => Case => Str}
+    Det = {s : Gender => Case => Str; n : Number}
+  -- English linearization
+  lin
+    UseCL t p cl = {s = cl.s ! t.t ! p.p}
+    PredVP np vp = {s = \\t, p => np.s ! Nom ++ vp.s ! t ! p ! vp.a}
+    AdjCN ap cn = {s = \\n, c => ap.s ! cn.g ! n ! c ++ cn.s ! n ! c; g = cn.g}
+    DetCN det cn = {
+      s = \\c => det.s ! cn.g ! c ++ cn.s ! det.n ! c;
+      a = Ag cn.g det.n P3
+    }
+\end{verbatim}
+\item
+  \textbf{API}
+
+\begin{verbatim}
+mkNP : Det -> CN -> NP
+mkNP : Pron -> NP
+\end{verbatim}
+\item
+  \textbf{Assignment}
+\end{itemize}
+
+write a concrete module for the City grammar in your chosen language
+using the RGL API.
+
+\begin{itemize}
+\tightlist
+\item
+  Documentation can be found in
+  \href{http://www.grammaticalframework.org/lib/doc/synopsis.html}{GF
+  Resource Grammar Library: Synopsis}.
+\end{itemize}
+
+\end{document}

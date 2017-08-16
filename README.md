@@ -1,5 +1,12 @@
 # Lab Notes for the Fifth GF Summer School
 
+## Compiling the notes
+
+The notes @ayberkt is taking everyday can be found in `day-<n>/notes.md`. You
+will find a Makefile for compiling these to pdf's through LaTeX; this is done
+through [Pandoc](http://pandoc.org/installing.html) so if things are not
+working out for you make sure that you have it installed.
+
 ## Things to Know
 
 ### get help on IRC

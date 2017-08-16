@@ -65,5 +65,10 @@ geometry: margin=1in
     mkNP : Pron -> NP
     ```
 
+* __Assignment__
+
+write a concrete module for the City grammar in your chosen language using the RGL API.
+
+
 * Documentation can be found in
   [GF Resource Grammar Library: Synopsis](http://www.grammaticalframework.org/lib/doc/synopsis.html).

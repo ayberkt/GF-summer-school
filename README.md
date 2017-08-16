@@ -23,9 +23,11 @@ while Day 1 introduced cloud.grammaticalframework.org/gfse/
 
 on Day 2 everybody downloaded http://www.grammaticalframework.org/download/index.html
 
-### there is homework
+### there are assignments
 
-see the Day-x directories
+see the Day-x directories for the assignments; they are usually described in notes.md.
+
+To see the answers to the homework, switch to the `mengwong` branch in Git. If the `mengwong` branch does not have the answers, it means Meng is either not smart enough or not trying hard enough or did not pay attention in class. Maybe all of the above.
 
 ## Food
 

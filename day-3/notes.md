@@ -73,6 +73,8 @@ geometry: margin=1in
 
     https://github.com/inariksit/GFSS2017/
 
+    https://docs.google.com/presentation/d/13RFVpcuZdfSNAFtzD9qPvCVdyET0X_-uBQLkEdOopHk/edit?usp=sharing
+
 
 * Documentation can be found in
   [GF Resource Grammar Library: Synopsis](http://www.grammaticalframework.org/lib/doc/synopsis.html).

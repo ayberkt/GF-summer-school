@@ -1,0 +1,12 @@
+#+TITLE Day 3 assignments
+
+* Assignment 1
+
+use the RGL to express the City grammar
+
+* Assignment 2
+
+?
+
+
+

@@ -67,7 +67,11 @@ geometry: margin=1in
 
 * __Assignment__
 
-write a concrete module for the City grammar in your chosen language using the RGL API.
+    write a concrete module for the City grammar in your chosen language using the RGL API.
+
+* __Inariksit's presentation__
+
+    https://github.com/inariksit/GFSS2017/
 
 
 * Documentation can be found in

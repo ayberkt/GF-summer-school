@@ -12,7 +12,7 @@ geometry: margin=1in
 
 * We want to abstract out the abstract syntax trees commonly used in
   linguistics.
-  - We do this kind of stuff using resource grammars.
+    - We do this kind of stuff using resource grammars.
 
 * Here are some of the functions we use for these purposes:
 
@@ -57,3 +57,13 @@ geometry: margin=1in
           a = Ag cn.g det.n P3
         }
     ```
+
+* __API__
+
+    ```GF
+    mkNP : Det -> CN -> NP
+    mkNP : Pron -> NP
+    ```
+
+* Documentation can be found in
+  [GF Resource Grammar Library: Synopsis](http://www.grammaticalframework.org/lib/doc/synopsis.html).

@@ -9,6 +9,12 @@ working out for you make sure that you have it installed.
 
 ## Things to Know
 
+### the slides
+
+Aarne's slides are available at http://www.grammaticalframework.org/gf-book/gf-book-slides.pdf
+
+See the other links at http://www.grammaticalframework.org/gf-book/
+
 ### get help on IRC
 
 go onto https://webchat.freenode.net/

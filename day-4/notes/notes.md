@@ -26,3 +26,6 @@ geometry: margin=1in
         - Recipe search (e.g., I'm hungry)
         - Recipe info (e.g., Does this contain peanuts)
         - User preferences (e.g., I hate garlic)
+    - Note: take a look at [Christina's example](RecipeSearch.gf)
+
+[RecipeSearch.gf]: https://gist.github.com/cunger/1e5d9e404c6979fc45cdf366b52562e1

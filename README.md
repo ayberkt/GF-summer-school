@@ -60,6 +60,8 @@ The advanced geeks use editors like emacs and vim.
 
 If you're new to the world of text editors, http://atom.io/ is a good choice.
 
+Sublime Text is also popular but they want money.
+
 
 ### Unix
 
@@ -86,7 +88,7 @@ Then get used to going in and out of the folders.
 Occasionally, run `git pull` to get the latest day's worth of work.
 
 
-### Now You Are Ready To Be Sisyphus
+### Now You Can Be Sisyphus
 
 Run Atom to edit your grammar files.
 
@@ -94,9 +96,9 @@ In the shell, run `gf` to import and play with your grammars.
 
 Your program will not work as you expect.
 
-This is called debugging. Good luck. May Lady Lovelace smile upon your efforts.
-
 Make changes. Save the file. Try `gf` again. Does it do what you want? No.
+
+This is called debugging. Good luck. May Lady Lovelace smile upon your efforts.
 
 Repeat this cycle ten thousand times and you will find you have become one of the technical people in the room. You will catch yourself saying to newbies, "oh, that's simple, all you have to do is ---".
 

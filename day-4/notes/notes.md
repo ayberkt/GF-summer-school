@@ -8,7 +8,14 @@ header-includes:
 geometry: margin=1in
 ---
 
+
 ## Application grammars (by _Christina Unger_ from `mercury.ai`)
+
+* https://scholar.google.com/citations?user=rC_nwQ0AAAAJ
+
+* motivation: situations where eyeballs and fingers are not available; instead we use our mouth and ears. In a car, in the kitchen, on a sofa.
+
+* applications need to interface between the user in the front end, and the world of data in the back end. hence a perfect opportunity for GF.
 
 ### Building an application grammar
 

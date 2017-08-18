@@ -87,7 +87,7 @@ For more on this, read Neal Stephenson's _In the Beginning was the Command Line_
 
 To download this repository, at your shell prompt, run:
 
-```github.com/ayberkt/GF-summer-school```
+```git clone github.com/ayberkt/GF-summer-school```
 
 Then get used to going in and out of the folders.
 

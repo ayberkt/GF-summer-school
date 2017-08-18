@@ -1,0 +1,17 @@
+* Motivation
+
+mikael:
+#+BEGIN_QUOTE
+I seem to be missing a way in RGL to say "you eat and sleep". There doesn't seem to be any `Conj -> VP -> VP -> VP`, but I can say "you eat and you sleep" using a `Conj -> S -> S -> S`
+#+END_QUOTE
+
+* Difficulty
+
+http://www.grammaticalframework.org/lib/doc/synopsis.html describes `ListNP` but not `ListVP`
+
+* Insight
+however, http://www.grammaticalframework.org/lib/doc/absfuns.html shows `ListVPS` and `ConjVPS` etc, which seem to trace in turn to Extra*
+
+* Solution
+
+see ~PandaEng.gf~

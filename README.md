@@ -91,8 +91,8 @@ To download this repository, at your shell prompt, run:
 
 While you're at it, you might as well also run
 
-```git clone https://github.com/GrammaticalFramework/GF
-git clone https://github.com/inariksit/GFSS2017
+```git clone https://github.com/inariksit/GFSS2017
+git clone https://github.com/GrammaticalFramework/GF
 git clone https://github.com/GrammaticalFramework/gf-contrib```
 
 Then get used to going in and out of the folders.

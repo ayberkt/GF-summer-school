@@ -93,6 +93,19 @@ Then get used to going in and out of the folders.
 
 Occasionally, run `git pull` to get the latest day's worth of work.
 
+### Opensource Egalitarianism: a Political Tangent
+
+It may not be immediately apparent that opensource in general and Github in particular are politically subversive of traditionally hegemonic power structures.
+
+How so?
+
+Proprietary software encodes a hierarchy in which those who control the source code are rigidly separated from those who run the compiled programs.
+
+Opensource culture subverts this hierarchy by transforming the power relationships between author and audience: when everyone's an author, everyone is empowered. As the saying goes at Burning Man, no spectators; everyone's a participant. Collective peer production and ownership has obvious parallels to Marxist thought.
+
+It is therefore important for newcomers to opensource to know that (generally speaking) they possess equal access to the source code as the original author. If you disagree with a piece of code, you aren't limited to cloning it; you can fork it, and take it in a different direction.
+
+After you clone this repo, you are welcome to fork the repo. You can edit your fork. In practice, while Marxists talk a big talk, they are in practice fairly agreeable people, who try to settle debates about composting without resorting to violence. So, in opensource, it is acceptable to align with your former oppressor by sending a pull request for your changes to go into the main branch.
 
 ### Now You Can Be Sisyphus
 

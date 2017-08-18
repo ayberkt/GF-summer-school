@@ -89,13 +89,15 @@ For more on this, read Neal Stephenson's _In the Beginning was the Command Line_
 
 To download this repository, at your shell prompt, run:
 
-```git clone https://github.com/ayberkt/GF-summer-school```
+```git clone https://github.com/ayberkt/GF-summer-school
+```
 
 While you're at it, you might as well also run
 
 ```git clone https://github.com/inariksit/GFSS2017
 git clone https://github.com/GrammaticalFramework/GF
-git clone https://github.com/GrammaticalFramework/gf-contrib```
+git clone https://github.com/GrammaticalFramework/gf-contrib
+```
 
 Then get used to going in and out of the folders.
 

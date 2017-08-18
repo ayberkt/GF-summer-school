@@ -53,7 +53,7 @@ dinner is planned for
 
 ## Other Technical Things
 
-If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. In fact the more technical you become, the more behind you feel, until one day you master category theory and transcend our mortal plane.
+If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. In fact the more technical it becomes, the more behind you feel, until one day you master category theory and transcend our mortal plane.
 
 
 ### Text Editor

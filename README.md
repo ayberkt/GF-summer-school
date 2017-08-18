@@ -53,7 +53,9 @@ dinner is planned for
 
 ## Other Technical Things
 
-If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. In fact the more technical it becomes, the more behind you feel, until one day you master category theory and transcend our mortal plane.
+If you come to GF without a technical background, you may feel super behind. Don't worry, everybody felt this way once. Many of the technical people in the room have decades of experience with computers. Do not let this intimidate you. Even they were beginners once. The little secret of our field is that the more technical experience you gain, the more you know you don't know, and the more behind you will feel, until one day you master category theory and transcend our mortal plane entirely.
+
+To obtain momentary relief from their own feelings of inadequacy, technical people are usually very willing to help beginners. However, due to the [Curse of Knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge), the ones who know the most are often the worst at teaching what they know; sadly, they [don't know it](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect). Have compassion for them: explain too little, and they are bad teachers. Explain too much, and they are mansplaining. This document attempts to find a happy medium.
 
 
 ### Text Editor

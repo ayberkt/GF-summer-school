@@ -39,6 +39,40 @@ while Day 1 introduced cloud.grammaticalframework.org/gfse/
 
 on Day 2 everybody downloaded http://www.grammaticalframework.org/download/index.html
 
+now you should be able to run `gf` at the command line:
+
+```
+.......% gf
+
+         *  *  *
+      *           *
+    *               *
+   *
+   *
+   *        * * * * * *
+   *        *         *
+    *       * * * *  *
+      *     *      *
+         *  *  *
+
+This is GF version 3.9.
+Built on darwin/x86_64 with ghc-8.0, flags: interrupt
+License: see help -license.
+
+
+Languages:
+>
+```
+
+Tip: the up arrow will take you through the command history, so you don't have to retype things all the time.
+
+Another tip:
+
+```
+....% echo "historyDuplicates: IgnoreConsecutive" >> ~/.haskeline
+```
+
+
 ### there are assignments
 
 see the Day-x directories for the assignments; they are usually described in notes.md.

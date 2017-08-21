@@ -21,7 +21,7 @@ geometry: margin=1in
 	- Recommended Github Desktop for Mac users: https://desktop.github.com/
 
 * Handy commands
-	- `git status` : to check where you are, what you 
+	- `git status`
     - `git log` : to check the history of a branch
     - `git checkout master` : to get back 'home' when you get lost 
 

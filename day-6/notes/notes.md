@@ -36,5 +36,5 @@ geometry: margin=1in
 
 ## Updated LibraryBrowser
 
-* The LibraryBrowser was generalied to work with the full RGL lexicon and some new languages.
+* The LibraryBrowser was generalized to work with the full RGL lexicon and some new languages.
 	- Sources under lib/src/api/libraryBrowser

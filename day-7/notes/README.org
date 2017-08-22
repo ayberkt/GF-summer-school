@@ -1,0 +1,9 @@
+#+TITLE: notes from day 7
+
+in honour of [[https://jyp.github.io/][jpy]]'s tutorial, meng takes notes in org-mode instead of markdown
+
+the tutorial is available at https://github.com/GU-CLASP/FraCoq/
+
+
+
+

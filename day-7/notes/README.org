@@ -4,6 +4,10 @@ in honour of [[https://jyp.github.io/][jpy]]'s tutorial, meng takes notes in org
 
 the tutorial is available at https://github.com/GU-CLASP/FraCoq/
 
+the paper is at http://www.stergioschatzikyriakidis.com/uploads/1/0/3/6/10363759/iwcs_bercha.pdf
+
+http://aclweb.org/anthology/D15-1244
+
 
 
 
